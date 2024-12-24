@@ -1,0 +1,128 @@
+﻿@model MyProject.Models.User
+
+<style>
+    body {
+        background-color: #eef2f7; /* Softer background color for better contrast */
+        color: #333; /* Darker text color for readability */
+        font-family: 'Roboto', sans-serif; /* Modern and clean font */
+        font-size: 16px; /* Standard font size */
+        margin: 0;
+        padding: 0;
+    }
+
+    .login {
+        width: 400px;
+        margin: 100px auto; /* Center the login form */
+        padding: 30px;
+        background-color: #ffffff; /* White background for contrast */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        border-radius: 8px; /* Rounded corners */
+        text-align: center; /* Center align content */
+    }
+
+        .login h3 {
+            color: #4a5568; /* Neutral color for heading */
+            margin-bottom: 20px;
+        }
+
+        .login label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2d3748; /* Darker neutral for labels */
+            text-align: left; /* Align labels to the left */
+        }
+
+        .login input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            background-color: #f7fafc; /* Light grey background */
+            color: #4a5568; /* Neutral text color */
+            border: 1px solid #cbd5e0; /* Subtle border color */
+            border-radius: 5px; /* Rounded corners for inputs */
+            font-size: 14px;
+        }
+
+            .login input:focus {
+                outline: none;
+                border-color: #3182ce; /* Highlight border color */
+                box-shadow: 0 0 4px rgba(49, 130, 206, 0.5); /* Glow effect */
+            }
+
+        .login span {
+            color: red;
+            font-size: 14px;
+        }
+
+        .login input[type="submit"],
+        .login a.btn-primary {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            box-sizing: border-box;
+            background-color: #3182ce; /* Primary blue color */
+            color: #fff; /* White text color */
+            border: none;
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer;
+            text-decoration: none; /* Remove underline */
+            display: inline-block;
+            font-size: 16px;
+        }
+
+            .login input[type="submit"]:hover,
+            .login a.btn-primary:hover {
+                background-color: #2b6cb0; /* Darker blue on hover */
+            }
+
+            .login input[type="submit"]:active,
+            .login a.btn-primary:active {
+                background-color: #2c5282; /* Even darker blue on active */
+            }
+</style>
+
+<div class="login">
+    <h3>Welcome to Our System</h3>
+    @if (ViewBag.error != "")
+    {
+        <span class="text-danger">@ViewBag.error</span>
+    }
+    <form asp-action="Login" method="post" id="LoginForm">
+        <div hidden>
+            <label asp-for="@Model.Id"></label>
+            <input asp-for="@Model.Id" class="" />
+            <br />
+            <span asp-validation-for="Id" style="color:red"></span>
+        </div>
+
+        <div>
+            <label asp-for="@Model.Email">Email Address</label>
+            <input asp-for="@Model.Email" id="Email" />
+            <br />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label asp-for="@Model.Password">Password</label>
+            <input asp-for="@Model.Password" id="Password" type="password" />
+            <br />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <input type="submit" value="Login" />
+        <a href="~/User/Signup" class="btn-primary">Signup</a>
+    </form>
+</div>
+
+<script>
+    document.getElementById('LoginForm').addEventListener('submit', function (event) {
+        var email = document.getElementById('Email').value;
+        var password = document.getElementById('Password').value;
+
+        if (!email || !password) {
+            alert('Please fill in all fields.');
+            event.preventDefault(); // Prevent the form from submitting
+        }
+    });
+</script>
