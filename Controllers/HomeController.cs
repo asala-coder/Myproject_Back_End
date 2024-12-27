@@ -8,9 +8,9 @@ namespace TireAssignment.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> Log)
         {
-            _logger = logger;
+            _logger = Log;
         }
 
         public IActionResult Index()
