@@ -37,7 +37,8 @@ namespace MyProject.Controllers
                 };
                 await dbcontext.students.AddAsync(student);
                 await dbcontext.SaveChangesAsync();
-                return RedirectToAction("Add", "Student");
+                
+                return RedirectToAction("Show");
             }
             else
             {
@@ -53,7 +54,7 @@ namespace MyProject.Controllers
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
-            var st = await dbcontext.students.FirstOrDefaultAsync(kamal => kamal.Id == id);
+            var st = await dbcontext.students.FirstOrDefaultAsync(Name => Name.Id == id);
             return View(st);
         }
         [HttpPost]
@@ -80,5 +81,21 @@ namespace MyProject.Controllers
                 return View(st);
             }
         }
+        public IActionResult DeleteStudent(int? id)
+        {
+
+
+            var hall = dbcontext.students.Find(id); // Find the Student by its ID
+
+            if (hall != null)
+            {
+                dbcontext.students.Remove(hall);
+                dbcontext.SaveChanges();
+                return RedirectToAction("Show");
+            }
+
+            return RedirectToAction("Show");
+        }
     }
+
 }

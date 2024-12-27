@@ -338,3 +338,4 @@ C:\Users\m\Desktop\MyProject\obj\Debug\net8.0\refint\MyProject.dll
 C:\Users\m\Desktop\MyProject\obj\Debug\net8.0\MyProject.pdb
 C:\Users\m\Desktop\MyProject\obj\Debug\net8.0\MyProject.genruntimeconfig.cache
 C:\Users\m\Desktop\MyProject\obj\Debug\net8.0\ref\MyProject.dll
+C:\Users\m\Desktop\MyProject\obj\Debug\net8.0\MyProject.sourcelink.json
