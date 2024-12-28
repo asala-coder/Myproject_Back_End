@@ -19,7 +19,7 @@ namespace MyProject.Controllers
         [HttpPost]
         public IActionResult Login(User user)
         {
-            var existing = _context.users.FirstOrDefault(mazen => mazen.Email == user.Email);
+            var existing = _context.users.FirstOrDefault(email => email.Email == user.Email);
             if (existing != null)
             {
                 if (existing.Email == user.Email && existing.Password == user.Password)
@@ -28,9 +28,10 @@ namespace MyProject.Controllers
                 }
                 else
                 {
-                    ViewBag.error = "Password OR Email are incorrect";
+                    
                     return View(user);
                 }
+
             }
             else
             {

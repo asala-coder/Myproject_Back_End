@@ -5,12 +5,32 @@
       "PackagePath": "staticwebassets\\MyProject.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\m\\Desktop\\MyProject\\wwwroot\\css\\StyleHome.css",
+      "PackagePath": "staticwebassets\\css\\StyleHome.css"
+    },
+    {
+      "Id": "C:\\Users\\m\\Desktop\\MyProject\\wwwroot\\css\\StyleLogin.css",
+      "PackagePath": "staticwebassets\\css\\StyleLogin.css"
+    },
+    {
+      "Id": "C:\\Users\\m\\Desktop\\MyProject\\wwwroot\\css\\StyleSignup.css",
+      "PackagePath": "staticwebassets\\css\\StyleSignup.css"
+    },
+    {
       "Id": "C:\\Users\\m\\Desktop\\MyProject\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\m\\Desktop\\MyProject\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\m\\Desktop\\MyProject\\wwwroot\\js\\JavaScriptLogin.js",
+      "PackagePath": "staticwebassets\\js\\JavaScriptLogin.js"
+    },
+    {
+      "Id": "C:\\Users\\m\\Desktop\\MyProject\\wwwroot\\js\\JavaScriptSignup.js",
+      "PackagePath": "staticwebassets\\js\\JavaScriptSignup.js"
     },
     {
       "Id": "C:\\Users\\m\\Desktop\\MyProject\\wwwroot\\js\\site.js",

@@ -31,5 +31,6 @@ namespace MyProject.Models
         public int Age { get; set; }
         [Required(ErrorMessage = "This Field is Required")]
         public int Fees { get; set; }
+
     }
 }

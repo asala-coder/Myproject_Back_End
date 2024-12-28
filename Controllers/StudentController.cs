@@ -12,10 +12,12 @@ namespace MyProject.Controllers
         {
             this.dbcontext = dbcontext;
         }
-        public IActionResult Index()
-        {
-            return View();
-        }
+        
+        // public IActionResult Index()
+        //{
+        //    return View();
+        //}
+         
         [HttpGet]
         public IActionResult Add()
         {
@@ -70,6 +72,7 @@ namespace MyProject.Controllers
                     stud.department = st.department;
                     stud.Age = st.Age;
                     stud.semester= st.semester;
+                    stud.Fees = st.Fees;
                     await dbcontext.SaveChangesAsync();
 
                 }
@@ -81,21 +84,24 @@ namespace MyProject.Controllers
                 return View(st);
             }
         }
-        public IActionResult DeleteStudent(int? id)
+        public async Task<IActionResult> DeleteStudent(int? id)
         {
-
-
-            var hall = dbcontext.students.Find(id); // Find the Student by its ID
-
-            if (hall != null)
+            if (id == null)
             {
-                dbcontext.students.Remove(hall);
-                dbcontext.SaveChanges();
-                return RedirectToAction("Show");
+                return RedirectToAction("Show"); 
+            }
+
+            var student = await dbcontext.students.FindAsync(id); 
+
+            if (student != null)
+            {
+                dbcontext.students.Remove(student); 
+                await dbcontext.SaveChangesAsync(); 
             }
 
             return RedirectToAction("Show");
         }
+
     }
 
 }
