@@ -27,5 +27,8 @@ namespace MyProject.Models
 
         public bool isAdmin { get; set; }
 
+
+        public bool isAdmin { get; set; }
+
     }
 }

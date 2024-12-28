@@ -3,6 +3,7 @@
 }
 @model List<MyProject.Models.Student>
 
+<<<<<<< HEAD
 <h1 class="text-center my-4 text-primary">📚 Show All Students</h1>
 
 <div class="container">
@@ -53,3 +54,42 @@
         </div>
     </div>
 </div>
+=======
+</h1>
+<hr />
+<table class="table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Department</th>
+            <th>semeser</th>
+            <th>Fees</th>
+            <th>Edit</th>
+            <th>Delete</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var stud in Model)
+        {
+            <tr>
+                <td>@stud.Id</td>
+                <td>@stud.Name</td>
+                <td>@stud.Age</td>
+                <td>@stud.department</td>
+                <td>@stud.semester</td>
+                <td>@stud.Fees</td>
+                <td><a asp-controller="Student" asp-action="Edit" class="btn btn-primary" asp-route-id="@stud.Id">Edit</a></td>
+                <td>
+                    <a asp-action="DeleteStudent" asp-controller="Student" asp-route-id="@stud.Id" class="btn btn-danger"
+                       onclick="return confirm('Are you sure you want to delete this student?');">
+                        Remove
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+>>>>>>> eb05e15 (Initial commit)

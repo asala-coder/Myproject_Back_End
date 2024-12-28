@@ -84,6 +84,7 @@ namespace MyProject.Controllers
                 return View(st);
             }
         }
+<<<<<<< HEAD
         public async Task<IActionResult> DeleteStudent(int? id)
         {
             if (id == null)
@@ -97,11 +98,27 @@ namespace MyProject.Controllers
             {
                 dbcontext.students.Remove(student); 
                 await dbcontext.SaveChangesAsync(); 
+=======
+        public IActionResult DeleteStudent(int? id)
+        {
+
+
+            var hall = dbcontext.students.Find(id); // Find the Student by its ID
+
+            if (hall != null)
+            {
+                dbcontext.students.Remove(hall);
+                dbcontext.SaveChanges();
+                return RedirectToAction("Show");
+>>>>>>> eb05e15 (Initial commit)
             }
 
             return RedirectToAction("Show");
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> eb05e15 (Initial commit)
     }
 
 }
