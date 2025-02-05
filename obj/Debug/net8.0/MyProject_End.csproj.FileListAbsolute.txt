@@ -1,0 +1,9 @@
+E:\MyProject\obj\Debug\net8.0\MyProject_End.csproj.AssemblyReference.cache
+E:\MyProject\obj\Debug\net8.0\MyProject_End.GeneratedMSBuildEditorConfig.editorconfig
+E:\MyProject\obj\Debug\net8.0\MyProject_End.AssemblyInfoInputs.cache
+E:\MyProject\obj\Debug\net8.0\MyProject_End.AssemblyInfo.cs
+E:\MyProject\obj\Debug\net8.0\MyProject_End.csproj.CoreCompileInputs.cache
+E:\MyProject\obj\Debug\net8.0\MyProject_End.MvcApplicationPartsAssemblyInfo.cache
+E:\MyProject\obj\Debug\net8.0\MyProject_End.RazorAssemblyInfo.cache
+E:\MyProject\obj\Debug\net8.0\MyProject_End.RazorAssemblyInfo.cs
+E:\MyProject\obj\Debug\net8.0\MyProject_End.sourcelink.json
