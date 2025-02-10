@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "ContactController",
+    "Method": "GetContacts",
+    "RelativePath": "api/Contact",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ContactController",
+    "Method": "SubmitContact",
+    "RelativePath": "api/Contact",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contact",
+        "Type": "ContactModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

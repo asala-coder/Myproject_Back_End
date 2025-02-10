@@ -4607,19 +4607,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\m\\.nuget\\packages\\": {}
+    "C:\\Users\\i.tech\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\MyProject\\MyProject.csproj",
+      "projectUniqueName": "D:\\Asala\\MyProject.csproj",
       "projectName": "MyProject",
-      "projectPath": "E:\\MyProject\\MyProject.csproj",
-      "packagesPath": "C:\\Users\\m\\.nuget\\packages\\",
-      "outputPath": "E:\\MyProject\\obj\\",
+      "projectPath": "D:\\Asala\\MyProject.csproj",
+      "packagesPath": "C:\\Users\\i.tech\\.nuget\\packages\\",
+      "outputPath": "D:\\Asala\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\m\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\i.tech\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4707,7 +4707,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
